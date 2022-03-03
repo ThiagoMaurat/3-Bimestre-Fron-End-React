@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- JSX => é uma extensão para criação de componentes -->
+    <!-- Babel => Transpilação de codigo entendível para o navegador -->
+
+    <script type="text/babel">
+      function Box1(props) {
+        return <li>{props.item}</li>;
+      }
+
+      const item1 = ["banana", "maça", "pêra", "ameixa"];
+      const item2 = ["melão", "melancia", "abacaxi", "laranja"];
+
+      const container = (
+        <>
+        <ul>
+          <h1>Lista de produtos em estoque:</h1>
+          {item1.map((item, index) => (
+            <Box1 item={item} index={index} />
+          ))}
+          
+        </ul>
+
+        <ul>
+          <h1>Produtos em falta: </h1>
+          {item2.map((item, index) => (
+            <Box1 item={item} index={index} />
+          ))}
+        </ul>
+        </>
+      );
+
+      ReactDOM.render(container, document.getElementById("container"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Apresentação</title>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+
+    <script>
+      var h1 = React.createElement(
+        "h1",
+        { style: { color: "blue" }, id: "title" },
+        "Olá mundo!"
+      );
+      var h2 = React.createElement(
+        "h2",
+        { style: { color: "red" }, id: "nome" },
+        "André Padilha - 35 anos ---",
+        "Wirley Almeida - 31 anos ---",
+        "Thiago Maurat - 27 anos",
+        " ---Francieli Celeghim - 31",
+        " --- Phillipe Borges",
+        " --- Vitor Bessoni"
+      );
+
+      var container = React.createElement("div", {}, [h1, h2]);
+
+      ReactDOM.render(container, document.getElementById("container"));
+    </script>
+  </body>
+</html>
