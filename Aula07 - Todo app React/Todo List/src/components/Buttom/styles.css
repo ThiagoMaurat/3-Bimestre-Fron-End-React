@@ -1,0 +1,21 @@
+.button{
+    background-color: #00C92C;    ;
+    height: 42px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9375rem;
+    border:none;
+    width: 120px;
+    border-radius: 12px;
+}
+
+.button2{
+    background-color: transparent;    ;
+    height: 42px;
+    color: #00C92C;
+    font-weight: bold;
+    font-size: 0.9375rem;
+    border: 2px solid #00C92C;
+    width: 120px;
+    border-radius: 12px;
+}
